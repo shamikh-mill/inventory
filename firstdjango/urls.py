@@ -18,8 +18,10 @@ from django.contrib import admin
 from inventory import views
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    url(r'^admin/', admin.site.urls), # first parameter is regex, next is view to call if match, and last is name parameter template
     url(r'^$', views.index, name='index'),
     url(r'^item/(?P<id>\d+)/', views.item_detail, name = 'item_detail'),
+    # if I put /item/number^ will take number as ID 
 ]
 
+# take path of a request and decide which views should handle the request
