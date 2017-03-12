@@ -1,6 +1,11 @@
+{% load staticfiles %}
+<!--for adding js and css to base.html from static dir  -->
+
 <!doctype HTML>
 <html>
 <head>
+  <link rel="stylesheet" href = "{% static 'main.css' %}" />
+
   <meta charset="UTF-8">
   <title>Inventory Project</title>
   <meta name = "description" content="">
@@ -8,5 +13,6 @@
 <body>
   {% block content %}
   {% endblock content %}
+  <script src= "{% static 'main.js' %}"></script>
 </body>
 </html>
